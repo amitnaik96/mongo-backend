@@ -4,7 +4,7 @@ import mongoose from 'mongoose';
 // const mongoUrl : string = 'mongodb://localhost:27015/myDB';  without network(us this link when directly connecting to mongo container)
 
 // connecting from a continaer to another container
-const mongoUrl : string = 'mongodb://mongoamit:27017/myDB'; // use mongo internal port (27017)
+const mongoUrl : string = process.env.MONGO_URL || 'mongodb://mongoamit:27017/myDB'; // use mongo internal port (27017)
 
 mongoose.connect(mongoUrl)
     .then(() => console.log(`DB connected`))

@@ -37,4 +37,4 @@ app.get('/users', async (req, res) => {
     }
 });
 
-app.listen(3000);
+app.listen(3000 , () => console.log(`Server is up at http://localhost:${3000}`));

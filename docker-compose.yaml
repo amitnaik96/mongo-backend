@@ -1,0 +1,21 @@
+version: '3.8'
+services:
+  mongoamit:
+    image: mongo # image must be present(or it tries to install from dockehub)
+    container_name: mongoamit
+    ports:
+      - "27017:27017"
+    volumes:
+      - mongodb_data:/data/db
+  mongo-backend:
+    # image: darkxprime/mongo-backend either get the image or build it
+    build: .
+    container_name: backend_app
+    depends_on:
+      - mongoamit
+    ports:
+      - "3000:3000"
+    environment:
+      - MONGO_URL=mongodb://mongoamit:27017
+volumes:
+  mongodb_data:
