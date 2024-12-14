@@ -2,7 +2,7 @@
 
 ![Build](https://github.com/amitnaik96/mongo-backend/blob/master/Build.png)
 
-## DOcker commands
+## Docker commands
 
 Create volume
 ```bash
