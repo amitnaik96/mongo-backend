@@ -19,7 +19,7 @@ Run mongo container
     docker run -d -v volume_database:/data/db --name mongoamit --network custom_network -p 27015:27017 mongo 
 ```
 
-Run mongo-backend-server container
+Run mongo-backend container (pull from DockerHub)
 ```bash
-    docker run -d --name backend --network custom_network -p 3000:3000 mongo-backend 
+    docker run -d --name backend --network custom_network -p 3000:3000 darkxprime/mongo-backend 
 ```
