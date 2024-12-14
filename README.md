@@ -1,6 +1,6 @@
 ## Build
 
-
+![Build](https://github.com/amitnaik96/mongo-backend/blob/master/Build.png)
 
 ## Docker commands
 
